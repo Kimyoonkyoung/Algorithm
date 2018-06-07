@@ -1,0 +1,2 @@
+add_subdirectory(6_BruteForce)
+add_subdirectory(7_DivideConquer)
