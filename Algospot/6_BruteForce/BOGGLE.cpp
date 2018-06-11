@@ -12,32 +12,38 @@
 #include <iostream>
 #include <stack>
 #include <string>
-
+#include <cstring>
 
 using namespace std;
 
 string _word;
 char _board[5][5];
+int _visited[5][5][10];
 
 int findWord(int y, int x, int idx) {
-    if (_word.at(idx) != _board[y][x])
+    // 영역 예외처리
+    if (y >= 5 || x >= 5)
         return 0;
 
-    idx++;
+    // 이미 방문한 index 는 recursive 안돌고 패스
+    if (_visited[y][x][idx])
+        return _visited[y][x][idx];
 
-    // 끝까지 왔다! 성공!
-    if (idx >= _word.size())
-        return 1;
+    // 현재위치 현재단어 검사
+    if (_word.at(idx) != _board[y][x])
+        return _visited[y][x][idx] = 0;
 
+    // final case : 끝까지 왔다! 성공!
+    if (idx++ >= _word.size())
+        return _visited[y][x][idx] = 1;
 
-    return findWord(y-1, x-1, idx) || findWord(y-1, x, idx) || findWord(y-1, x+1, idx)
-           || findWord(y, x-1, idx) || findWord(y, x+1, idx)
-           || findWord(y+1, x-1, idx) || findWord(y+1, x, idx) || findWord(y+1, x+1, idx);
+    return _visited[y][x][idx] = (findWord(y-1, x-1, idx) || findWord(y-1, x, idx) || findWord(y-1, x+1, idx)
+                                  || findWord(y, x-1, idx) || findWord(y, x+1, idx)
+                                  || findWord(y+1, x-1, idx) || findWord(y+1, x, idx) || findWord(y+1, x+1, idx));
 }
 
-void boggle() {
 
-    bool visited[5][5][10];
+void boggle() {
 
     // read test case
     int testCase;
@@ -54,9 +60,11 @@ void boggle() {
         scanf("%d\n", &numWord);
 
         for (int i = 0; i < numWord; i++) {
-            //std::memset(visited, 0, sizeof(visited)); // 방문했을 당시에 T/F 저장
 
+            // initialize
+            memset(_visited, 0, sizeof(_visited));
             _word.clear();
+
             getline(cin, _word);
 
             // 모든 board 에 대해 탐색
@@ -66,7 +74,6 @@ void boggle() {
                 for (int x = 0; x < 5; x++) {
 
                     if (findWord(y, x, 0)) {
-
                         find = true;
                         break;
                     }
@@ -86,15 +93,6 @@ void boggle() {
     }
 }
 
-
-
-
 int main() {
-    int numCase = 1;
-    //scanf("%d", &numCase);
-
-    if (numCase <= 0 || numCase > 50)
-        return false;
-
-    while (numCase--) boggle();
+    boggle();
 }
