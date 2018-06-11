@@ -22,7 +22,7 @@ int _visited[5][5][10];
 
 int findWord(int y, int x, int idx) {
     // 영역 예외처리
-    if (y >= 5 || x >= 5)
+    if (y >= 5 || x >= 5 || y < 0 || x < 0)
         return 0;
 
     // 이미 방문한 index 는 recursive 안돌고 패스
@@ -34,8 +34,9 @@ int findWord(int y, int x, int idx) {
         return _visited[y][x][idx] = 0;
 
     // final case : 끝까지 왔다! 성공!
-    if (idx++ >= _word.size())
-        return _visited[y][x][idx] = 1;
+    idx++;
+    if (idx >= _word.size())
+        return 1;
 
     return _visited[y][x][idx] = (findWord(y-1, x-1, idx) || findWord(y-1, x, idx) || findWord(y-1, x+1, idx)
                                   || findWord(y, x-1, idx) || findWord(y, x+1, idx)
