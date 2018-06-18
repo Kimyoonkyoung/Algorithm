@@ -42,6 +42,11 @@ int maxSubArray(const vector<int> &A) {
 
 
 #ifdef INVERSESEARCH
+/**
+ * 그냥 알고리즘이 틀림
+ * 앞에서 부터 더하면서 찾고, 뒤에서 부터 빼면서 찾는 방법으로 접근하려고했었음
+ */
+ *
     int sum = 0;
     int lastIdx = -1;
     for (int i = 0; i < A.size(); i++) {
@@ -65,6 +70,12 @@ int maxSubArray(const vector<int> &A) {
 
 
 #ifdef BRUTEFORCE
+/**
+ * Brute-force 로 해결한 문제
+ * 답은 맞으나 시간초과
+ * O(n^2)
+ */
+         *
     for (int i = 0; i < A.size()-1; i++) {
 
         int sum = A[i];
