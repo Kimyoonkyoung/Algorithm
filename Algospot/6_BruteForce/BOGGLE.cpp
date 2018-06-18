@@ -10,7 +10,6 @@
  */
 
 #include <iostream>
-#include <stack>
 #include <string>
 #include <cstring>
 
