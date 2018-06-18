@@ -7,5 +7,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
 
-add_subdirectory(Algospot)
+#add_subdirectory(Algospot)
 #add_subdirectory(Leetcode)
+add_subdirectory(InterviewBit)

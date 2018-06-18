@@ -66,18 +66,19 @@ void picnic() {
             _matchMatrix[p2][p1] = true;
         }
 
-#if 0
+#if 1
         // max pair 를 만족시키는 경우 (더 해볼 필요도 없음)
         if ((_numStudent * (_numStudent-1)) >> 1 == numPair) {
-            printf("%d\n", _numStudent-1);
+            //printf("%d\n", _numStudent-1);
             continue;
         }
+#endif
 
         if (numPair <= 0) {
             printf("0\n");
             continue;
         }
-#endif
+
 
         printf("%d\n", matchPairs(matched));
 
