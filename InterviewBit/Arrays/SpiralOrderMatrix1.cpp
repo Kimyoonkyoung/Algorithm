@@ -26,6 +26,18 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
         return spiral;
     }
 
+    if (width == 1 && height > 1) {
+        for (int i = 0; i < height; i++)
+            spiral.push_back(A[i][0]);
+        return spiral;
+    }
+
+    if (height == 1 && width > 1) {
+        for (int i = 0; i < width; i++)
+            spiral.push_back(A[0][i]);
+        return spiral;
+    }
+
     bool visited[height][width];
     std::memset(visited, false, sizeof(visited));
 
@@ -35,8 +47,8 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
     down.x = width-1; down.y = 1;
     up.x = 0; up.y = height-2;
 
-    while (right.y < (height>>1) && left.y >= (height>>1)
-           && down.x >= (width>>1) && up.x < (width>>1)) {
+    while (right.y <= (height>>1) && left.y >= (height>>1)
+           && down.x >= (width>>1) && up.x <= (width>>1)) {
 
         // right 전진
         int initX = right.x;
@@ -101,10 +113,10 @@ int main() {
     sub.push_back(4);
     A.push_back(sub);
 
-    sub.clear();
-    sub.push_back(5);
-    sub.push_back(6);
-    A.push_back(sub);
+    //sub.clear();
+    //sub.push_back(5);
+    //sub.push_back(6);
+    //A.push_back(sub);
 
     vector<int> ret = spiralOrder(A);
     for (int i = 0; i < ret.size(); i++)
