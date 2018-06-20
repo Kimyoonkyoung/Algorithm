@@ -14,7 +14,9 @@ struct Point
     int y;
 };
 
+
 vector<vector<int>> generateMatrix(int A) {
+#ifdef MORE_MEMORY
     vector<vector<int>> ret;
     ret.resize(A);
     for (int i = 0; i < A; i++) {
@@ -84,6 +86,65 @@ vector<vector<int>> generateMatrix(int A) {
         up.x = initX + 1;
         up.y = initY - 1;
     }
+#endif // MORE_MEMORY
+
+
+#define FASTEST
+#ifdef FASTEST
+    vector<vector<int>> ret;
+    ret.resize(A);
+    for (int i = 0; i < A; i++) {
+        ret[i].resize(A);
+    }
+
+    if (A == 1) {
+        ret[0][0] = 1;
+        return ret;
+    }
+
+    int top = 0;
+    int bottom = A - 1;
+    int left = 0;
+    int right = A - 1;
+
+    int i, dir = 0;
+    int val = 1;
+    while (top <= bottom && left <= right) {
+        switch (dir) {
+            case 0:
+                // to right
+                for (i = left; i <= right; i++) {
+                    ret[top][i] = val++;
+                }
+                top++;
+                break;
+            case 1:
+                // to bottom
+                for (i = top; i <= bottom; i++) {
+                    ret[i][right] = val++;
+                }
+                right--;
+                break;
+            case 2:
+                // to left
+                for (i = right; i >= left; i--) {
+                    ret[bottom][i] = val++;
+                }
+                bottom--;
+                break;
+            case 3:
+                // to top
+                for (i = bottom; i >= top; i--) {
+                    ret[i][left] = val++;
+                }
+                left++;
+                break;
+            default:
+                break;
+        }
+        dir = (dir + 1) % 4;
+    }
+#endif // FASTEST
 
     return ret;
 }
@@ -91,7 +152,7 @@ vector<vector<int>> generateMatrix(int A) {
 
 int main() {
 
-    int A = 1;
+    int A = 5;
     vector<vector<int>> ret = generateMatrix(A);
     for (int i = 0; i < A; i++) {
         for (int j = 0; j < A; j++) {
@@ -99,4 +160,6 @@ int main() {
         }
         printf("\n");
     }
+
+
 }
