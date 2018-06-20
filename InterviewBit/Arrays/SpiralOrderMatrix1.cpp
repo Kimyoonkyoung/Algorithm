@@ -17,6 +17,10 @@ struct Point
 vector<int> spiralOrder(const vector<vector<int> > &A) {
 
 #ifdef MORE_MEMORY
+    /**
+     * 정답 처리됨
+     * 하지만 한 방향마다 종료조건 보기위해서 사용한 추가적인 visited 메모리가 필요한 알고리즘
+     */
     std::vector<int> spiral;
 
     int width = (int)A[0].size();
@@ -97,8 +101,12 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
     }
 #endif // MORE_MEMORY
 
-#define FASTEST
-#ifdef FASTEST
+#define FASTEST_SOLUTION
+#ifdef FASTEST_SOLUTION
+    /**
+    * visited 추가 메모리 필요없는 방법
+     * point 쓰지 않고, '축' 개념으로 더 간단하게 해결할 수 있음
+    */
     std::vector<int> spiral;
 
     int width = (int)A[0].size();
@@ -120,9 +128,6 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
             spiral.push_back(A[0][i]);
         return spiral;
     }
-
-    bool visited[height][width];
-    std::memset(visited, false, sizeof(visited));
 
     int top = 0;
     int bottom = (int)A.size() - 1;
@@ -165,10 +170,10 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
         }
         dir = (dir + 1) % 4;
     }
-#endif // FASTEST
+#endif // FASTEST_SOLUTION
+
 
     return spiral;
-
 }
 
 

@@ -8,7 +8,7 @@
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/SpiralOrderMatrix1.cpp
 * Spiral order Matrix 2
   * https://www.interviewbit.com/problems/spiral-order-matrix-ii/
-  * 
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/SpiralOrderMatrix2.cpp
 * RotateArray
   * https://www.interviewbit.com/problems/arraybug/
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/RotateArray.cpp
