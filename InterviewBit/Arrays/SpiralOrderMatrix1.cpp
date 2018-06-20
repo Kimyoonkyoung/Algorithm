@@ -129,33 +129,41 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
     int left = 0;
     int right = (int)A[0].size() - 1;
 
-    int i;
+    int i, dir = 0;
     while (top <= bottom && left <= right) {
-
-        // to right
-        for (i = left; i <= right; i++) {
-            spiral.push_back(A[top][i]);
+        switch (dir) {
+            case 0:
+                // to right
+                for (i = left; i <= right; i++) {
+                    spiral.push_back(A[top][i]);
+                }
+                top++;
+                break;
+            case 1:
+                // to bottom
+                for (i = top; i <= bottom; i++) {
+                    spiral.push_back(A[i][right]);
+                }
+                right--;
+                break;
+            case 2:
+                // to left
+                for (i = right; i >= left; i--) {
+                    spiral.push_back(A[bottom][i]);
+                }
+                bottom--;
+                break;
+            case 3:
+                // to top
+                for (i = bottom; i >= top; i--) {
+                    spiral.push_back(A[i][left]);
+                }
+                left++;
+                break;
+            default:
+                break;
         }
-        top++;
-
-        // to bottom
-        for (i = top; i <= bottom; i++) {
-            spiral.push_back(A[i][right]);
-        }
-        right--;
-
-        // to left
-        for (i = right; i >= left; i--) {
-            spiral.push_back(A[bottom][i]);
-        }
-        bottom--;
-
-        // to top
-        for (i = bottom; i >= top; i--) {
-            spiral.push_back(A[i][left]);
-        }
-        left++;
-
+        dir = (dir + 1) % 4;
     }
 #endif // FASTEST
 
