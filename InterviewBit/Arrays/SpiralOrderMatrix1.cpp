@@ -16,6 +16,7 @@ struct Point
 
 vector<int> spiralOrder(const vector<vector<int> > &A) {
 
+#ifdef MORE_MEMORY
     std::vector<int> spiral;
 
     int width = (int)A[0].size();
@@ -94,6 +95,69 @@ vector<int> spiralOrder(const vector<vector<int> > &A) {
         up.x = initX + 1;
         up.y = initY - 1;
     }
+#endif // MORE_MEMORY
+
+#define FASTEST
+#ifdef FASTEST
+    std::vector<int> spiral;
+
+    int width = (int)A[0].size();
+    int height = (int)A.size();
+
+    if (width == 1 && height == 1) {
+        spiral.push_back(A[0][0]);
+        return spiral;
+    }
+
+    if (width == 1 && height > 1) {
+        for (int i = 0; i < height; i++)
+            spiral.push_back(A[i][0]);
+        return spiral;
+    }
+
+    if (height == 1 && width > 1) {
+        for (int i = 0; i < width; i++)
+            spiral.push_back(A[0][i]);
+        return spiral;
+    }
+
+    bool visited[height][width];
+    std::memset(visited, false, sizeof(visited));
+
+    int top = 0;
+    int bottom = (int)A.size() - 1;
+    int left = 0;
+    int right = (int)A[0].size() - 1;
+
+    int i;
+    while (top <= bottom && left <= right) {
+
+        // to right
+        for (i = left; i <= right; i++) {
+            spiral.push_back(A[top][i]);
+        }
+        top++;
+
+        // to bottom
+        for (i = top; i <= bottom; i++) {
+            spiral.push_back(A[i][right]);
+        }
+        right--;
+
+        // to left
+        for (i = right; i >= left; i--) {
+            spiral.push_back(A[bottom][i]);
+        }
+        bottom--;
+
+        // to top
+        for (i = bottom; i >= top; i--) {
+            spiral.push_back(A[i][left]);
+        }
+        left++;
+
+    }
+#endif // FASTEST
 
     return spiral;
 
@@ -106,17 +170,23 @@ int main() {
 
     sub.push_back(1);
     sub.push_back(2);
+    sub.push_back(3);
+    sub.push_back(4);
     A.push_back(sub);
 
     sub.clear();
     sub.push_back(3);
     sub.push_back(4);
+    sub.push_back(5);
+    sub.push_back(6);
     A.push_back(sub);
 
-    //sub.clear();
-    //sub.push_back(5);
-    //sub.push_back(6);
-    //A.push_back(sub);
+    sub.clear();
+    sub.push_back(5);
+    sub.push_back(6);
+    sub.push_back(5);
+    sub.push_back(6);
+    A.push_back(sub);
 
     vector<int> ret = spiralOrder(A);
     for (int i = 0; i < ret.size(); i++)
