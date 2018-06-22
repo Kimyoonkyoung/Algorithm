@@ -14,4 +14,6 @@
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/RotateArray.cpp
 * Largest Number
   * https://www.interviewbit.com/problems/largest-number/
-  *
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/LargestNumber.cpp
+* First Missing Integer
+  * https://www.interviewbit.com/problems/first-missing-integer/
