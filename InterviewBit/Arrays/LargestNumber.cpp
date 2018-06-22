@@ -49,7 +49,7 @@ void merge(vector<int>& A, int startIdx, int midIdx, int endIdx) {
     }
     if (r <= endIdx) {
         for (int i = r; i <= endIdx; i++) {
-            tmp.push_back(A[r]);
+            tmp.push_back(A[i]);
         }
     }
 
@@ -61,11 +61,6 @@ void merge(vector<int>& A, int startIdx, int midIdx, int endIdx) {
 
 void mergesort(vector<int>& A, int startIdx, int endIdx) {
     int mid;
-
-    // 종료조건
-    if (A.size() == 1)
-        return;
-
     if (startIdx < endIdx) {
         mid = (startIdx + endIdx) / 2;
         mergesort(A, startIdx, mid);
@@ -108,8 +103,8 @@ int main() {
     A.push_back(9);
     A.push_back(99);
     A.push_back(999);
-    A.push_back(9999);
     A.push_back(9998);
+    A.push_back(9999);
     //A.push_back(1);
     //A.push_back(34);
     //A.push_back(5);
