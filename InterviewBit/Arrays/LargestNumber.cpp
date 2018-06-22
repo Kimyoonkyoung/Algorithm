@@ -81,11 +81,21 @@ string largestNumber(const vector<int>& A) {
     inputA.assign(A.begin(), A.end());
     inputA = A;
 
-    mergesort(inputA, 0, A.size()-1);
+    mergesort(inputA, 0, (int)inputA.size()-1);
+
+    int i = 0;
+    while (i < inputA.size() && inputA[i] == 0) {
+        i++;
+    }
+
+    if (i == inputA.size())
+        return "0";
+
+    inputA.erase(inputA.begin(), inputA.begin() + i);
 
     string ret;
-    for (int i = 0; i < A.size(); i++) {
-        ret.append(to_string(A[i]));
+    for (int i = 0; i < inputA.size(); i++) {
+        ret.append(to_string(inputA[i]));
     }
 
     return ret;
@@ -95,8 +105,12 @@ string largestNumber(const vector<int>& A) {
 int main() {
     vector<int> A;
 
-    A.push_back(8);
-    A.push_back(89);
+    A.push_back(9);
+    A.push_back(99);
+    A.push_back(999);
+    A.push_back(9999);
+    A.push_back(9998);
+    //A.push_back(1);
     //A.push_back(34);
     //A.push_back(5);
     //A.push_back(9);
