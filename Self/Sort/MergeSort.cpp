@@ -47,11 +47,6 @@ void merge(vector<int>& A, int startIdx, int midIdx, int endIdx) {
 
 void mergesort(vector<int>& A, int startIdx, int endIdx) {
     int mid;
-
-    // 종료조건
-    if (A.size() == 1)
-        return;
-
     if (startIdx < endIdx) {
         mid = (startIdx + endIdx) / 2;
         mergesort(A, startIdx, mid);
