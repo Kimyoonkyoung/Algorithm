@@ -21,6 +21,7 @@ void setZeroes(vector<vector<int> > &A)
     size_t height = A.size();
     size_t width  = A[0].size();
 
+#ifdef MEMORY_EXCEEDED
     vector<Point> zero;
     Point p;
     for (int i = 0; i < height; i++) {
@@ -42,6 +43,38 @@ void setZeroes(vector<vector<int> > &A)
             A[zero[i].y][j]  = 0;
         }
     }
+#endif //MEMORY_EXCEEDED
+
+    // set LUT
+    vector<int> row, col;
+    row.resize(height);
+    col.resize(width);
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (A[i][j] == 0) {
+                row[i] = 1;
+                col[j] = 1;
+            }
+        }
+    }
+
+    // set row
+    for (int i = 0; i < height; i++) {
+        if (row[i]) {
+            for (int j = 0; j < width; j++) {
+                A[i][j] = 0;
+            }
+        }
+    }
+
+    // set col
+    for (int i = 0; i < width; i++) {
+        if (col[i]) {
+            for (int j = 0; j < height; j++) {
+                A[j][i] = 0;
+            }
+        }
+    }
 
     for (int i = 0; i < A.size(); i++) {
         for (int j = 0; j < A[i].size(); j++) {
@@ -58,20 +91,18 @@ int main() {
 
     sub.push_back(1);
     sub.push_back(0);
-    sub.push_back(1);
     A.push_back(sub);
 
     sub.clear();
     sub.push_back(1);
     sub.push_back(1);
-    sub.push_back(1);
     A.push_back(sub);
-
+/*
     sub.clear();
     sub.push_back(1);
     sub.push_back(1);
     sub.push_back(1);
     A.push_back(sub);
-
+*/
     setZeroes(A);
 }
