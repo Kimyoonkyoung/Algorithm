@@ -17,3 +17,7 @@
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/LargestNumber.cpp
 * First Missing Integer
   * https://www.interviewbit.com/problems/first-missing-integer/
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/FirstMissingInteger.cpp
+* Set Matrix Zeros
+  * https://www.interviewbit.com/problems/set-matrix-zeros/
+  * https://github.com/Kimyoonkyoung/Algorithm/tree/master/InterviewBit/Arrays
