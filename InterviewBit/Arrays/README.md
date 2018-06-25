@@ -21,3 +21,6 @@
 * Set Matrix Zeros
   * https://www.interviewbit.com/problems/set-matrix-zeros/
   * https://github.com/Kimyoonkyoung/Algorithm/tree/master/InterviewBit/Arrays
+* Rotate Matrix
+  * https://www.interviewbit.com/problems/rotate-matrix/
+  *
