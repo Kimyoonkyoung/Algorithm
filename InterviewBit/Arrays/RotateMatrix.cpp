@@ -16,8 +16,10 @@ using namespace std;
 
 void rotateMatrix(vector<vector<int> > &A) {
 
-    int minIdx = 0, maxIdx = A.size() - 1;
+    if (A.size() == 1)
+        return;
 
+    int minIdx = 0, maxIdx = A.size() - 1;
     while (minIdx < A.size() / 2.f) {
 
         for (int rot = 0; rot < maxIdx - minIdx; rot++) {
