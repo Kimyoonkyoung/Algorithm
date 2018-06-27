@@ -35,7 +35,7 @@ void merge(vector<int>& A, int startIdx, int midIdx, int endIdx) {
     }
     if (r <= endIdx) {
         for (int i = r; i <= endIdx; i++) {
-            tmp.push_back(A[r]);
+            tmp.push_back(A[i]);
         }
     }
 
