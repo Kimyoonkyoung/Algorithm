@@ -11,4 +11,7 @@
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Math/ReverseInteger.cpp
 * Grid Unique Paths
   * https://www.interviewbit.com/problems/grid-unique-paths/
-  * 
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Math/GridUniquePaths.cpp
+* Trailing Zeros In Factorial
+  * https://www.interviewbit.com/problems/trailing-zeros-in-factorial/
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Math/TrailingZerosinFactorial.cpp

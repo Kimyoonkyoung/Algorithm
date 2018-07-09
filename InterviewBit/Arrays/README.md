@@ -29,4 +29,4 @@
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/Arrays/WaveArray.cpp
 * N/3 Repeat Number
   * https://www.interviewbit.com/problems/n3-repeat-number/
-  * 풀어야함!
+  * 풀어야함! (해설을 봐도 잘 모르겠는 문제..)
