@@ -9,3 +9,6 @@
 * Matrix Search
   * https://www.interviewbit.com/problems/matrix-search/
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/BinarySearch/MatrixSearch.cpp
+* Implement Power Function
+  * https://www.interviewbit.com/problems/implement-power-function/
+  * 실패.. 
