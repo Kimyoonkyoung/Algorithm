@@ -4,6 +4,9 @@
  * Project : Algorithm
  */
 
+// https://stackoverflow.com/questions/2177781/how-to-calculate-modulus-of-large-numbers
+// 위에 링크 보고 이해해보기 
+
 #include <climits>
 #include <iostream>
 #include <math.h>
