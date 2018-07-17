@@ -19,6 +19,7 @@ void reverseWords(string &A) {
     if (len <= 1)
         return;
 
+#ifdef BASIC
     // get space index
     std::vector<int> spaceIdx;
     spaceIdx.push_back(-1); // initial setting
@@ -46,13 +47,41 @@ void reverseWords(string &A) {
         A[i] = tmp[i];
     }
     A[writeIdx-1] = '\0';
+#endif //BASIC
+
+#ifndef ADVANCED
+    std::vector<string> subStr;
+    string tmp;
+    for (int i = 0; i < len; i++) {
+        // ignore
+        if (A[i] == ' ' && A[i + 1] == ' ') {
+            continue;
+        }
+        else if (A[i] == ' ' && A[i + 1] != ' ') { // end
+            subStr.push_back(tmp);
+            tmp = "";
+        }
+        else { // word
+            tmp += A[i];
+        }
+    }
+
+    tmp = "";
+    for (int i = (int)subStr.size() - 1; i >= 0; i--) {
+        tmp += subStr[i];
+        tmp += " ";
+    }
+
+    A = tmp;
+
+#endif // ADVANCED
 
     printf("%s\n", A.c_str());
 }
 
 int main() {
     string A;
-    A = "rachel    minii   kakao corp     ";
+    A = "   rachel    minii   kakao corp     ";
 
     reverseWords(*(&A));
 
