@@ -6,7 +6,6 @@
 #include <climits>
 #include <iostream>
 
-
 using namespace std;
 
 int strStr(const string A, const string B) {
