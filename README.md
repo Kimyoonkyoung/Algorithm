@@ -1,17 +1,30 @@
 # Algorithm
 
+#### Self rule
 
-## 공부 및 정리방법
+> commit log convention
 
-문제 풀어나간 흐름(최적화 과정) 은 **commit log** 이용
+* PASSED 
+  * 풀어서 통과된 코드
 
-각 폴더별 **문제링크/구현링크** 리스트 목록화
+* OPTIMIZED {text}
+    * 통과된 후 최적화 
+    * {text}
+        * time
+        * memory
+* REVISE 
+    * 소소한 코드 수정
+
+> README convention
+
+* 카테고리 | 제목 | 난이도 | 설명 | 문제링크
+
+---
 
 
+#### Algorithm Sites
 
-## 공부 사이트
-
-#### [Algospot](https://algospot.com/judge/problem/list/)
+> [Algospot](https://algospot.com/judge/problem/list/)
 
 * [책 - 알고리즘 문제해결 전략](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260546&orderClick=LAG&Kc=) 내의 문제 사이트
 
@@ -19,12 +32,12 @@
 
   
 
-#### [Leetcode](https://leetcode.com/)
+> [Leetcode](https://leetcode.com/)
 
 * 알고리즘 코드 매우 많은 사이트
 
   
-#### [InterviewBit](https://www.interviewbit.com/dashboard/)
+> [InterviewBit](https://www.interviewbit.com/dashboard/) (집중 풀이중!)
 
 * 출제 회사표기해주면서, 단계별로 문제 많은 사이트
 
