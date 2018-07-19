@@ -6,3 +6,6 @@
 * Reverse The String
   * https://www.interviewbit.com/problems/reverse-the-string/
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/ReverseTheString.cpp
+* Count And Say
+  * https://www.interviewbit.com/problems/count-and-say/
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/CountAndSay.cpp
