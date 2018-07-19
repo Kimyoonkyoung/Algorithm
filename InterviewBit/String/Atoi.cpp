@@ -18,24 +18,14 @@ int atoi(const string A) {
     while (A[idx] == ' ')
         idx++;
 
-    // check first char? or int?
-    if (!isdigit(A[idx]) && A[idx] != '-' && A[idx] != '+') {
-        return ret;
-    }
-
-    // is negative?
-    if (A[idx] == '-') {
-        mul = -1;
-        idx++;
-    }
-
-    // is positive?
-    if (A[idx] == '+') {
+    // negative check
+    if (A[idx] == '-' || A[idx] == '+') {
+        mul = A[idx] == '-' ? -1 : 1;
         idx++;
     }
 
     string str;
-    while (A[idx] != ' ' && isdigit(A[idx])) {
+    while (A[idx] != ' ' && A[idx] >= '0' && A[idx] <= '9') {
         str += A[idx];
         idx++;
     }

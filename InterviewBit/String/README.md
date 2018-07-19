@@ -9,3 +9,6 @@
 * Count And Say
   * https://www.interviewbit.com/problems/count-and-say/
   * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/CountAndSay.cpp
+* Atoi
+  * https://www.interviewbit.com/problems/atoi/
+  * https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/Atoi.cpp
