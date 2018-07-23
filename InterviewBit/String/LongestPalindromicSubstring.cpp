@@ -8,6 +8,19 @@
 
 using namespace std;
 
+
+string searchPalindrome(string A, int left, int right) {
+    string ret;
+
+    while (left >= 0 && right < A.size() && A[left] == A[right]) {
+        left--;
+        right++;
+    }
+    ret = A.substr(left + 1, (right - left - 1));
+
+    return ret;
+}
+
 string longestPalindrome(string A) {
     string ret="";
 
@@ -21,40 +34,18 @@ string longestPalindrome(string A) {
 
     for (int i = 1; i < A.size(); i++) {
 
-        int offset = 1;
         string tmp;
         tmp = A[i];
 
         // odd palindromic check
-        while ((i - offset) >= 0 && (i + offset) < A.size()) {
-
-            if (A[i - offset] == A[i + offset]) {
-
-                if (((offset * 2) + 1) > tmp.size()) {
-                    tmp = A.substr(i - offset, (offset * 2) + 1);
-                }
-
-                offset++;
-            }
-            else {
-                break;
-            }
-        }
-
-        // even palindromic check
-        int left = i - 1, right = i;
-        while (left >= 0 && right < A.size() && A[left] == A[right]) {
-
-            if ((right - left) + 1> tmp.size()) {
-                tmp = A.substr(left, (right - left) + 1);
-            }
-            left--;
-            right++;
-        }
-
+        tmp = searchPalindrome(A, i, i);
         if (tmp.size() > ret.size())
             ret = tmp;
 
+        // even palindromic check
+        tmp = searchPalindrome(A, i-1, i);
+        if (tmp.size() > ret.size())
+            ret = tmp;
     }
 
     return ret;
@@ -64,7 +55,8 @@ string longestPalindrome(string A) {
 int main() {
     string A;
     //A = "cacaccbabcabbbaacbbbbcaaaccaacbabcaccbccaacccaacbbaaabbbabcaaabc"; // aacbbbbcaa
-    A = "abacdfgdcaba"; // aba
+    //A = "abacdfgdcaba"; // aba
+    A = "aa";
 
     printf("%s\n", longestPalindrome(A).c_str());
 
