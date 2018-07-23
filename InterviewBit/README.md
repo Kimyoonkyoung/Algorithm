@@ -45,3 +45,4 @@
 |  String  |   [Count And Say](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/CountAndSay.cpp)    |   2    |         brute-force 하다고 생각할 수 있지만 그게 답          |   https://www.interviewbit.com/problems/count-and-say/    |
 |  String  |        [Atoi](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/Atoi.cpp)        |   2    |    여러 예외케이스를 미리 고민하는 문제 (알고리즘은 쉬움)    |        https://www.interviewbit.com/problems/atoi/        |
 |  String  | [Longest Common Prefix](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/LongestCommonPrefix.cpp) | 2 | 단순하게 예외경우만 생각하면 되는 문제 | https://www.interviewbit.com/problems/longest-common-prefix/ |
+| String | [Longest Palindromic Substring](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/LongestPalindromicSubstring.cpp) | 4 | 알고보면 쉽게풀수있는문제 O(n) 도 가능하다는데 O(n)은 난이도 5! | https://www.interviewbit.com/problems/longest-palindromic-substring/ |
