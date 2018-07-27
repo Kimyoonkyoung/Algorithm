@@ -51,4 +51,5 @@
 ### Two Pointers
 | 카테고리 |     문제 풀이      | 난이도 |                          추가 설명                           |                         문제 링크                         |
 | :------: | :----------------: | :----: | :----------------------------------------------------------: | :-------------------------------------------------------: |
-| TwoPointers | [Merge Two Sorted Lists]() | 1 | merge sort 에서 merge 함수 구하는 것 | https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/ |
+| TwoPointers | [Merge Two Sorted Lists](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/MergeTwoSortedLists.cpp) | 1 | merge sort 에서 merge 함수 구하는 것 | https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/ |
+| TwoPointers | [Remove Duplicates from Sorted Array](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/RemoveDuplicatesfromSortedArray.cpp)  | 2 | two pointer 쓰면 쉬운 문제 | https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/ |
