@@ -15,7 +15,7 @@
 |   Arrays   |                    [N/3 Repeat Number]()                     |   5    |                         모르겠다..                         |   https://www.interviewbit.com/problems/n3-repeat-number/    |
 
 
-### BinarySearch
+### Binary Search
 
 |   카테고리   |        문제 풀이         | 난이도 |                       추가 설명                        |                          문제 링크                           |
 | :----------: | :----------------------: | :----: | :----------------------------------------------------: | :----------------------------------------------------------: |
@@ -46,3 +46,9 @@
 |  String  |        [Atoi](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/Atoi.cpp)        |   2    |    여러 예외케이스를 미리 고민하는 문제 (알고리즘은 쉬움)    |        https://www.interviewbit.com/problems/atoi/        |
 |  String  | [Longest Common Prefix](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/LongestCommonPrefix.cpp) | 2 | 단순하게 예외경우만 생각하면 되는 문제 | https://www.interviewbit.com/problems/longest-common-prefix/ |
 | String | [Longest Palindromic Substring](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/String/LongestPalindromicSubstring.cpp) | 4 | 알고보면 쉽게풀수있는문제 O(n) 도 가능하다는데 O(n)은 난이도 5! | https://www.interviewbit.com/problems/longest-palindromic-substring/ |
+
+
+### Two Pointers
+| 카테고리 |     문제 풀이      | 난이도 |                          추가 설명                           |                         문제 링크                         |
+| :------: | :----------------: | :----: | :----------------------------------------------------------: | :-------------------------------------------------------: |
+| TwoPointers | [Merge Two Sorted Lists]() | 1 | merge sort 에서 merge 함수 구하는 것 | https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/ |
