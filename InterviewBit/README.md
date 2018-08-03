@@ -53,3 +53,5 @@
 | :------: | :----------------: | :----: | :----------------------------------------------------------: | :-------------------------------------------------------: |
 | TwoPointers | [Merge Two Sorted Lists](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/MergeTwoSortedLists.cpp) | 1 | merge sort 에서 merge 함수 구하는 것 | https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/ |
 | TwoPointers | [Remove Duplicates from Sorted Array](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/RemoveDuplicatesfromSortedArray.cpp)  | 2 | two pointer 쓰면 쉬운 문제 | https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/ |
+| TwoPointers | [Three Sum](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/ThreeSum.cpp) | 3 | 음수 처리, TLE 에 신경써야하는 문제 | https://www.interviewbit.com/problems/3-sum/ |
+| Twopointers | [Diffk](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/Diffk.cpp) | 2 | 정렬된 배열을 잘 사용하면 되는 문제 (TLE) | https://www.interviewbit.com/problems/diffk/ |
