@@ -23,6 +23,7 @@
 | BinarySearch |    [Search For A Range](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/BinarySearch/SearchForARange.cpp)    |   2    |             binary search 로 하면 쉬운문제             |  https://www.interviewbit.com/problems/search-for-a-range/   |
 | BinarySearch |      [Matrix Search](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/BinarySearch/MatrixSearch.cpp)       |   1    |            sorted 라는 조건때문에 쉬운문제             |     https://www.interviewbit.com/problems/matrix-search/     |
 | BinarySearch | [Implement Power Function](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/BinarySearch/ImplementPowerFunction.cpp) |   4    | 수학적 사고와 자료형을 잘 조합해야하는 문제 (못풀었음) | https://www.interviewbit.com/problems/implement-power-function/ |
+| BinarySearch | [KthSmallestElementInTheArray](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/BinarySearch/KthSmallestElementInTheArray.cpp) | 4 | Binary search 를 value 로 하는 방법 | https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/ |
 
 
 ### Math
@@ -54,5 +55,6 @@
 | TwoPointers | [Merge Two Sorted Lists](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/MergeTwoSortedLists.cpp) | 1 | merge sort 에서 merge 함수 구하는 것 | https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/ |
 | TwoPointers | [Remove Duplicates from Sorted Array](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/RemoveDuplicatesfromSortedArray.cpp)  | 2 | two pointer 쓰면 쉬운 문제 | https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/ |
 | TwoPointers | [Three Sum](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/ThreeSum.cpp) | 3 | 음수 처리, TLE 에 신경써야하는 문제 | https://www.interviewbit.com/problems/3-sum/ |
-| Twopointers | [Diffk](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/Diffk.cpp) | 2 | 정렬된 배열을 잘 사용하면 되는 문제 (TLE) | https://www.interviewbit.com/problems/diffk/ |
-| Twopointers | [ContainerWithMostWater](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/ContainerWithMostWater.cpp) | 4 | two pointer 를 활용해야만 하는 문제 (+수학) | https://www.interviewbit.com/problems/container-with-most-water/ |
+| TwoPointers | [Diffk](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/Diffk.cpp) | 2 | 정렬된 배열을 잘 사용하면 되는 문제 (TLE) | https://www.interviewbit.com/problems/diffk/ |
+| TwoPointers | [ContainerWithMostWater](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/ContainerWithMostWater.cpp) | 4 | two pointer 를 활용해야만 하는 문제 (+수학) | https://www.interviewbit.com/problems/container-with-most-water/ |
+| TwoPointers | [NumRange](https://github.com/Kimyoonkyoung/Algorithm/blob/master/InterviewBit/TwoPointers/NumRange.cpp) | 2 | 종료조건만 잘 설정하면 TLE 안걸리는 문제임 | https://www.interviewbit.com/problems/numrange/ |
